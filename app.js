@@ -1,14 +1,15 @@
 //Imports
 var express = require('express');
+
+require('dotenv').config();
+
 var createError = require('http-errors');
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var database = require('./src/middlewares/database');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var flash = require('express-flash');
-var dotenv = require('dotenv').config(); // For secret token access in .env file
 var utils = require('./src/middlewares/utils');
 var debug = require('debug')('tp3-prog-web:server');
 

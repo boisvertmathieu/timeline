@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const validateEmail = function(email) {
+const validateEmail = function (email) {
     let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email)
-}
+    return re.test(email);
+};
 
 const Schema = mongoose.Schema;
-const UtilisateurSchema =  new Schema({
+const UtilisateurSchema = new Schema({
     username: {
         type: String,
         required: true,

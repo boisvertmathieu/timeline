@@ -1,22 +1,20 @@
 let mongoose = require('mongoose');
 
-const username = 'dbAdmin';
-const password = 'bPnHFnlLoOkZSCEN'; //TODO Ne pas laisser ceci en clair
-const database = 'tp3';
-
 class Database {
     constructor() {
-        this._connect()
+        this.db_connection_url = 'mongodb+srv://' + process.env.MONGO_DATABASE_USERNAME + ':' + process.env.MONGO_DATABASE_PASSWORD + '@timeline.ge8mr.mongodb.net/timeline?retryWrites=true&w=majority';
+        this._connect();
     }
 
     _connect() {
-        mongoose.connect(`mongodb+srv://${username}:${password}@gagnonj-tp3-progwa.nvxnx.mongodb.net/${database}?retryWrites=true&w=majority`, {useFindAndModify: false})
+        mongoose.connect(this.db_connection_url, {useFindAndModify: false})
             .then(() => {
-                console.log('Database connection successful')
+                console.log('Database connection successful');
             })
             .catch(err => {
-                console.error('Database connection error')
-            })
+                console.error('Database connection error');
+                console.error(this.db_connection_url);
+            });
     }
 }
 

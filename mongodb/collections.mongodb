@@ -1,0 +1,88 @@
+
+use('timeline');
+
+db.createCollection("invitations", {
+    validator: {
+        $jsonSchema : {
+            required: ["id_user_to", "id_partie", "status"],
+            properties: {
+                id_user_to: {
+                    bsonType: "objectId",
+                    description: "Must be of type objectId and is required"
+                },
+                id_partie: {
+                    bsonType: "objectId",
+                    description: "Must be of type objectId and is required"
+                },
+                status: {
+                    bsonType: "int",
+                    minimum: 0,
+                    maximum: 2,
+                    description: "Must be of type int, between 0 and 2 and is required"
+                }
+            }
+        }
+    }
+})
+
+db.createCollection("cartes", {
+    validator: {
+        $jsonSchema: {
+            required: ["cue", "rep", "show"],
+            properties: {
+                cue : {
+                    bsonType: "string",
+                    description: "Must be of type string and is required"
+                },
+                rep:{
+                    bsonType:"int",
+                    description: "Must be of type int and is required"
+                },
+                show: {
+                    bsonType:"string",
+                    description:"Must be of type string and is required"
+                }
+            }
+        }
+    }
+})
+
+db.createCollection("parties", {
+    validator: {
+        $jsonSchema: {
+            required: ["date_heure"],
+            properties: {
+                date_heure: {
+                    bsonType: "date",
+                    description: "Must be of type date and is required"
+                }
+            }
+        }
+    }
+})
+
+db.createCollection("utilisateurs", {
+    validator: {
+        $jsonSchema: {
+            required: ["username", "password", "email", "isAdmin"],
+            properties: {
+                username: {
+                    bsonType: "string",
+                    description: "Must be of type string and is required"
+                },
+                password: {
+                    bsonType: "string",
+                    description: "Must be of type string and is required"
+                },
+                email: {
+                    bsonType: "string",
+                    description: "Must be of type string and is required"
+                },
+                isAdmin: {
+                    bsonType: "bool",
+                    description: "Must be of type boolean and is required"
+                },
+            }
+        }
+    }
+})

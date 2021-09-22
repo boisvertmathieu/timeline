@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5fac523c65eec7756e7979b4"},"username":"babushka","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"babushka@gmail.com","isAdmin":false}
+{"_id":{"$oid":"5fac52bcd9cdb2756e2b1059"},"username":"sangoku","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"sangoku@gmail.com","isAdmin":true}
+{"_id":{"$oid":"5fac52bcd9cdb2756e2b105a"},"username":"gohan","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"gohan@gmail.com","isAdmin":false}
+{"_id":{"$oid":"5fac52bcd9cdb2756e2b105b"},"username":"vegeta","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"vegeta@gmail.com","isAdmin":true}
+{"_id":{"$oid":"5fac52bcd9cdb2756e2b105c"},"username":"cell","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"cell@gmail.com","isAdmin":false}
+{"_id":{"$oid":"5fac52bcd9cdb2756e2b105d"},"username":"boo","password":"$2y$04$yotfy4L3c4n4ncwxi07TGOp97yETIU9H/DReUUNK/Di3n4oO97.lS","email":"boo@gmail.com","isAdmin":true}
